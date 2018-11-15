@@ -23,6 +23,8 @@ export function removeClass(element, klass) {
     element.classList.remove(klass);
   } else {
     let existingClass = element.getAttribute('class')
-    element.setAttribute('class', existingClass.replace(klass, ''));
+    if(existingClass){
+        element.setAttribute('class', existingClass.replace(klass, ''));
+    }
   }
 }
